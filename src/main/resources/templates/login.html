@@ -12,6 +12,8 @@
         .btn-primary:hover { background: #c73652; border-color: #c73652; }
         .form-control:focus { border-color: #e94560; box-shadow: 0 0 0 0.2rem rgba(233,69,96,.25); }
         .divider { border-color: rgba(0,0,0,.1); }
+
+        footer { font-size: .90rem; color: gray }
     </style>
 </head>
 <body class="d-flex align-items-center justify-content-center">
@@ -54,6 +56,10 @@
                         계정이 없으신가요?
                         <a th:href="@{/signup}" class="text-decoration-none fw-semibold" style="color:#e94560">회원가입</a>
                     </p>
+                    <hr>
+                    <footer>
+                        <p th:text="${'실습 수행 일시: ' + #temporals.format(#temporals.createNow(), 'yyyy-MM-dd HH:mm:ss') + ' | 학번: 2371433 | 이름: 박나현'}"></p>
+                    </footer>
                 </div>
             </div>
         </div>
